@@ -1,0 +1,868 @@
+{
+	"folders": [
+		{
+			"name": "Test",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/leopoldkucinski/Dokumenty/Unreal"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Test Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Test",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Test",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Test",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Shipping",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Shipping",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"Linux",
+					"Shipping",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Test",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Test",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Test",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Shipping",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Shipping",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Test LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "Test LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Test",
+					"LinuxArm64",
+					"Shipping",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TestEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"Debug",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TestEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"DebugGame",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"TestEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			},
+			{
+				"label": "TestEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"TestEditor",
+					"Linux",
+					"Development",
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Test (Debug)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "Test Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Test (DebugGame)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "Test Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Test (Development)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "Test Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Test (Test)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "Test Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Test (Shipping)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "Test Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TestEditor (Debug)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "TestEditor Linux Debug Build",
+				"args": [
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject"
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TestEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "TestEditor Linux DebugGame Build",
+				"args": [
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject"
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch TestEditor (Development)",
+				"request": "launch",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "TestEditor Linux Development Build",
+				"args": [
+					"/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject"
+				],
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal",
+				"type": "cppdbg",
+				"visualizerFile": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/leopoldkucinski/Dokumenty/Unreal/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/leopoldkucinski/Dokumenty/Unreal Projects/Test/Test.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/leopoldkucinski/Dokumenty/Unreal"
+			}
+		]
+	}
+}
